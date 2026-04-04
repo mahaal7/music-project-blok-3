@@ -3,24 +3,23 @@ require 'database.php';
 
 $id = $_GET['id'];
 
-$result = $pdo->query("SELECT * FROM albums WHERE id = $id");
+// نجيب ألبوم واحد فقط
+$album = $pdo->query("SELECT * FROM albums WHERE id = $id")->fetch();
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Album Detail</title>
-    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<?php foreach ($result as $album): ?>
 
 <div class="detail">
 
     <h1><?= $album['titel'] ?></h1>
 
-    <img src="images/<?= $album['thumbnail_url'] ?>">
+    <img src="<?= $album['thumbnail_url'] ?>">
 
     <p><strong>Artiest:</strong> <?= $album['artiest'] ?></p>
     <p><strong>Genre:</strong> <?= $album['genre'] ?></p>
@@ -33,8 +32,6 @@ $result = $pdo->query("SELECT * FROM albums WHERE id = $id");
     <a href="index.php">← Terug</a>
 
 </div>
-
-<?php endforeach; ?>
 
 </body>
 </html>

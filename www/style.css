@@ -1,0 +1,96 @@
+body {
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+/* العنوان */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* الفورم */
+form {
+    text-align: center;
+    margin: 20px;
+}
+
+select, button {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* الكونتينر */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* الكرت */
+.card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* hover 🔥 */
+.card:hover {
+    transform: scale(1.05);
+    background: #334155;
+}
+
+/* الصور */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* النص */
+.card h2 {
+    font-size: 18px;
+}
+
+.card p {
+    color: #cbd5f5;
+}
+
+/* اللينك */
+.link {
+    text-decoration: none;
+    color: white;
+}
+.detail {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.detail img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+body.small * {
+    font-size: 12px !important;
+}
+
+body.normal * {
+    font-size: 16px !important;
+}
+
+body.large * {
+    font-size: 22px !important;
+}
